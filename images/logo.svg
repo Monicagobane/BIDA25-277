@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 130" width="460" height="130" role="img" aria-labelledby="logoTitle">
+  <title id="logoTitle">Aurela — Fine Jewelry</title>
+
+  <!-- faceted diamond mark -->
+  <g fill="none" stroke="#8f6f3f" stroke-width="2.4" stroke-linejoin="round">
+    <path d="M55,20 L85,45 L72,110 L38,110 L25,45 Z"/>
+    <path d="M25,45 L85,45"/>
+    <path d="M55,20 L38,110"/>
+    <path d="M55,20 L72,110"/>
+    <path d="M25,45 L72,110"/>
+    <path d="M85,45 L38,110"/>
+  </g>
+
+  <!-- wordmark -->
+  <text x="118" y="72" font-family="'Cormorant Garamond', Georgia, 'Times New Roman', serif"
+        font-size="46" font-weight="600" letter-spacing="7" fill="#14120f">AURELA</text>
+
+  <!-- tagline -->
+  <text x="120" y="96" font-family="'Jost', Arial, sans-serif"
+        font-size="12" letter-spacing="4" fill="#8f6f3f">FINE JEWELRY</text>
+</svg>

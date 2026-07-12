@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap');
+
+:root {
+  --ink: #1c1a17;
+  --cream: #f8f4ee;
+  --cream-deep: #efe8db;
+  --gold: #b8935a;
+  --gold-deep: #8f6f3f;
+  --charcoal: #14120f;
+  --line: rgba(28, 26, 23, 0.12);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  color: var(--ink);
+  background: var(--cream);
+  letter-spacing: 0.01em;
+}
+
+h1, h2, h3, h4, .display-serif {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+}
+
+a { color: var(--gold-deep); text-decoration: none; }
+a:hover { color: var(--gold); }
+
+.btn-gold {
+  background: var(--charcoal);
+  color: var(--cream);
+  border: 1px solid var(--charcoal);
+  padding: 0.75rem 2.25rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border-radius: 0;
+  transition: all 0.25s ease;
+}
+.btn-gold:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--charcoal);
+}
+
+.btn-outline-gold {
+  background: transparent;
+  color: var(--charcoal);
+  border: 1px solid var(--charcoal);
+  padding: 0.65rem 1.75rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: 0;
+}
+.btn-outline-gold:hover {
+  background: var(--charcoal);
+  color: var(--cream);
+}
+
+/* ---------- Navbar ---------- */
+.navbar-aurela {
+  background: var(--cream);
+  border-bottom: 1px solid var(--line);
+  padding: 1rem 0;
+}
+.navbar-aurela .navbar-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  padding: 0.35rem 0.9rem;
+  line-height: 1;
+}
+.navbar-aurela .nav-link {
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin: 0 0.6rem;
+  padding: 0.4rem 0 !important;
+  border-bottom: 1px solid transparent;
+}
+.navbar-aurela .nav-link:hover,
+.navbar-aurela .nav-link.active {
+  color: var(--gold-deep);
+  border-bottom: 1px solid var(--gold-deep);
+}
+.nav-search {
+  position: relative;
+  max-width: 220px;
+}
+.nav-search input {
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  padding: 0.4rem 1rem 0.4rem 2.1rem;
+  font-size: 0.82rem;
+  background: #fff;
+}
+.nav-search input:focus {
+  outline: none;
+  border-color: var(--gold-deep);
+}
+.nav-search .bi-search {
+  position: absolute;
+  left: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.85rem;
+  color: var(--ink);
+  opacity: 0.6;
+}
+
+/* ---------- Dark wireframe-style section ---------- */
+.dark-section {
+  background: var(--charcoal);
+  padding: 3rem 0;
+}
+.dark-section .section-title span { color: var(--gold); }
+.dark-section .section-title h2 { color: var(--cream); }
+
+.carousel-frame {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1.5px solid var(--cream);
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  background: rgba(20,18,15,0.25);
+  z-index: 3;
+}
+.carousel-arrow.prev { left: 1.25rem; }
+.carousel-arrow.next { right: 1.25rem; }
+.carousel-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1.5px solid var(--cream);
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  background: rgba(20,18,15,0.25);
+  z-index: 3;
+}
+
+.container-tile {
+  background: var(--cream-deep);
+  border-radius: 4px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+.container-tile:hover { transform: translateY(-3px); }
+.container-tile .img-wrap {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 4px 4px 0 0;
+  background: #e4ddcf;
+}
+.container-tile img { width: 100%; height: 100%; object-fit: cover; }
+.container-tile .tile-label {
+  padding: 0.9rem 0.5rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  color: var(--ink);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  min-height: 78vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  color: var(--cream);
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(20,18,15,0.45), rgba(20,18,15,0.65));
+}
+.hero-content { position: relative; z-index: 2; }
+.hero h1 {
+  color: var(--cream);
+  font-size: clamp(2.4rem, 5vw, 4rem);
+}
+.hero p { font-size: 1.05rem; opacity: 0.9; max-width: 34rem; }
+
+.page-header {
+  background: var(--cream-deep);
+  padding: 3.5rem 0 2.75rem;
+  border-bottom: 1px solid var(--line);
+}
+
+/* ---------- Cards ---------- */
+.product-card {
+  border: 1px solid var(--line);
+  background: #fff;
+  transition: box-shadow 0.2s ease;
+}
+.product-card:hover { box-shadow: 0 10px 24px rgba(20,18,15,0.08); }
+.product-card .img-wrap {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: var(--cream-deep);
+}
+.product-card img { width: 100%; height: 100%; object-fit: cover; }
+.product-card .card-body { padding: 1.1rem 1.2rem 1.35rem; }
+.product-tag {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.section-title span {
+  display: block;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  margin-bottom: 0.5rem;
+}
+
+.gold-banner {
+  background: var(--charcoal);
+  color: var(--cream);
+  padding: 3rem 0;
+}
+.gold-banner h2 { color: var(--cream); }
+.gold-banner p { color: rgba(248,244,238,0.75); }
+
+.filter-btn {
+  border: 1px solid var(--line);
+  background: transparent;
+  padding: 0.5rem 1.3rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  border-radius: 0;
+}
+.filter-btn.active,
+.filter-btn:hover {
+  background: var(--charcoal);
+  color: var(--cream);
+  border-color: var(--charcoal);
+}
+
+/* ---------- Forms ---------- */
+.form-luxe label {
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 0.35rem;
+}
+.form-luxe .form-control,
+.form-luxe .form-select {
+  border-radius: 0;
+  border: 1px solid var(--line);
+  padding: 0.65rem 0.9rem;
+  background: #fff;
+}
+.form-luxe .form-control:focus,
+.form-luxe .form-select:focus {
+  border-color: var(--gold-deep);
+  box-shadow: 0 0 0 0.15rem rgba(184,147,90,0.25);
+}
+
+/* ---------- Footer ---------- */
+footer.site-footer {
+  background: var(--charcoal);
+  color: rgba(248,244,238,0.75);
+  padding: 3rem 0 1.5rem;
+}
+footer.site-footer h5 {
+  color: var(--cream);
+  font-size: 1.3rem;
+}
+footer.site-footer a { color: rgba(248,244,238,0.75); }
+footer.site-footer a:hover { color: var(--gold); }
+footer.site-footer .footer-bottom {
+  border-top: 1px solid rgba(248,244,238,0.12);
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  font-size: 0.8rem;
+}
+.footer-links-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.85rem;
+}
+.footer-links-row a { margin-right: 1.5rem; }
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(248,244,238,0.35);
+  border-radius: 50%;
+  margin-left: 0.5rem;
+  font-size: 0.95rem;
+}
+.social-icons a:hover { background: var(--gold); color: var(--charcoal); border-color: var(--gold); }
+
+.stat-block { border-left: 1px solid var(--line); padding-left: 1.25rem; }
+
+.navbar-aurela .navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  line-height: 1;
+}
+.navbar-aurela .navbar-brand img {
+  display: block;
+  height: 34px;
+  width: auto;
+}

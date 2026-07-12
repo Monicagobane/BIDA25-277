@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Collections — Aurela</title>
+<meta name="description" content="Browse Aurela's collections of rings, necklaces, bracelets and watches in gold, silver and platinum.">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-aurela">
+  <div class="container d-flex align-items-center">
+    <a class="navbar-brand me-3" href="index.html"><img src="images/logo.svg" alt="Aurela — Fine Jewelry" height="34"></a>
+    <div class="nav-search d-none d-md-block me-auto">
+      <i class="bi bi-search"></i>
+      <input type="text" placeholder="Search" aria-label="Search products">
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="collections.html">Collection</a></li>
+        <li class="nav-item"><a class="nav-link" href="custom-orders.html">Orders</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="page-header text-center">
+  <div class="container">
+    <span class="d-block mb-2" style="font-size:0.78rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold-deep);">Shop</span>
+    <h1>Our collections</h1>
+    <p class="mb-0">Browse rings, necklaces, bracelets and watches ,  or request any piece as a custom order.</p>
+  </div>
+</div>
+
+<section class="py-5">
+  <div class="container">
+
+    <div class="d-flex flex-wrap justify-content-center gap-2 mb-5">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="rings">Rings</button>
+      <button class="filter-btn" data-filter="necklaces">Necklaces</button>
+      <button class="filter-btn" data-filter="bracelets">Bracelets</button>
+      <button class="filter-btn" data-filter="watches">Watches</button>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-6 col-lg-3 product-item" data-category="rings">
+        <div class="product-card h-100">
+          <div class="img-wrap"><img src="images/image27.avif" alt="18k gold solitaire diamond engagement ring" width="400" height="400"></div>
+          <div class="card-body">
+            <p class="product-tag mb-1">Ring · 18k gold</p>
+            <h3 class="h6 mb-2">Solitaire Ring</h3>
+            <a href="custom-orders.html?item=Solitaire%20Ring" class="btn btn-outline-gold btn-sm w-100">Customize this</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-3 product-item" data-category="rings">
+        <div class="product-card h-100">
+          <div class="img-wrap"><img src="images/image11.webp" alt="Stacked gold and silver statement rings" width="400" height="400"></div>
+          <div class="card-body">
+            <p class="product-tag mb-1">Ring · gold &amp; silver</p>
+            <h3 class="h6 mb-2">Stacked Band Set</h3>
+            <a href="custom-orders.html?item=Stacked%20Band%20Set" class="btn btn-outline-gold btn-sm w-100">Customize this</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-3 product-item" data-category="necklaces">
+        <div class="product-card h-100">
+          <div class="img-wrap"><img src="images/image36.avif" alt="Delicate gold pendant necklace" width="400" height="400"></div>
+          <div class="card-body">
+            <p class="product-tag mb-1">Necklace · 18k gold</p>
+            <h3 class="h6 mb-2">Aurela Pendant</h3>
+            <a href="custom-orders.html?item=Aurela%20Pendant" class="btn btn-outline-gold btn-sm w-100">Customize this</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-3 product-item" data-category="necklaces">
+        <div class="product-card h-100">
+          <div class="img-wrap"><img src="images/image54.avif" alt="Chunky gold chain necklace" width="400" height="400"></div>
+          <div class="card-body">
+            <p class="product-tag mb-1">Necklace · gold</p>
+            <h3 class="h6 mb-2">Cuban Link Chain</h3>
+            <a href="custom-orders.html?item=Cuban%20Link%20Chain" class="btn btn-outline-gold btn-sm w-100">Customize this</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-3 product-item" data-category="bracelets">
+        <div class="product-card h-100">
+          <div class="img-wrap"><img src="images/image5.jpg" alt="Silver tennis bracelet with small gemstones" width="400" height="400"></div>
+          <div class="card-body">
+            <p class="product-tag mb-1">Bracelet · silver</p>
+            <h3 class="h6 mb-2">Tennis Bracelet</h3>
+            <a href="custom-orders.html?item=Tennis%20Bracelet" class="btn btn-outline-gold btn-sm w-100">Customize this</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-3 product-item" data-category="bracelets">
+        <div class="product-card h-100">
+          <div class="img-wrap"><img src="images/image45.avif" alt="Gold bangle bracelet" width="400" height="400"></div>
+          <div class="card-body">
+            <p class="product-tag mb-1">Bracelet · gold</p>
+            <h3 class="h6 mb-2">Classic Bangle</h3>
+            <a href="custom-orders.html?item=Classic%20Bangle" class="btn btn-outline-gold btn-sm w-100">Customize this</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-3 product-item" data-category="watches">
+        <div class="product-card h-100">
+          <div class="img-wrap"><img src="images/image43.avif" alt="Men's luxury gold wristwatch" width="400" height="400"></div>
+          <div class="card-body">
+            <p class="product-tag mb-1">Watch · gold</p>
+            <h3 class="h6 mb-2">Regal Chronograph</h3>
+            <a href="custom-orders.html?item=Regal%20Chronograph" class="btn btn-outline-gold btn-sm w-100">Customize this</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-3 product-item" data-category="watches">
+        <div class="product-card h-100">
+          <div class="img-wrap"><img src="images/image13.avif" alt="Men's luxury stainless steel and silver wristwatch" width="400" height="400"></div>
+          <div class="card-body">
+            <p class="product-tag mb-1">Watch · silver steel</p>
+            <h3 class="h6 mb-2">Heritage Steel</h3>
+            <a href="custom-orders.html?item=Heritage%20Steel" class="btn btn-outline-gold btn-sm w-100">Customize this</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <h5>Aurela</h5>
+        <p class="mt-2">Fine custom jewelry in gold, silver and platinum. Based in Gaborone, Botswana.</p>
+      </div>
+      <div class="col-md-4">
+        <h6 class="text-uppercase mb-3" style="font-size:0.8rem;letter-spacing:0.1em;color:#f8f4ee;">Quick links</h6>
+        <ul class="list-unstyled">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="custom-orders.html">Custom orders</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h6 class="text-uppercase mb-3" style="font-size:0.8rem;letter-spacing:0.1em;color:#f8f4ee;">Contact</h6>
+        <p class="mb-1">Gaborone, Botswana</p>
+        <p class="mb-1">aurelajewelry@gmail.com</p>
+        <p>+267 78 680 374</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-links-row mb-2">
+        <div>
+          <a href="#">Terms of use</a>
+          <a href="#">Privacy policy</a>
+        </div>
+        <div class="d-flex align-items-center">
+          <span class="me-2">Follow us on...</span>
+          <span class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+            <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+          </span>
+        </div>
+      </div>
+      <div>TM &amp; &copy; 2026 Aurela Jewelry. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
