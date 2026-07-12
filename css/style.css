@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap');
 
+/* main colors used across the site */
 :root {
   --ink: #1c1a17;
   --cream: #f8f4ee;
@@ -38,13 +39,15 @@ a:hover { color: var(--gold); }
   font-size: 0.85rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  border-radius: 0;
+  border-radius: 8px;
   transition: all 0.25s ease;
 }
 .btn-gold:hover {
   background: var(--gold);
   border-color: var(--gold);
   color: var(--charcoal);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(20,18,15,0.18);
 }
 
 .btn-outline-gold {
@@ -55,14 +58,17 @@ a:hover { color: var(--gold); }
   font-size: 0.8rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  border-radius: 0;
+  border-radius: 8px;
+  transition: all 0.25s ease;
 }
 .btn-outline-gold:hover {
   background: var(--charcoal);
   color: var(--cream);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(20,18,15,0.15);
 }
 
-/* ---------- Navbar ---------- */
+/* navbar */
 .navbar-aurela {
   background: var(--cream);
   border-bottom: 1px solid var(--line);
@@ -74,8 +80,6 @@ a:hover { color: var(--gold); }
   font-weight: 600;
   letter-spacing: 0.08em;
   color: var(--ink);
-  border: 1px solid var(--ink);
-  padding: 0.35rem 0.9rem;
   line-height: 1;
 }
 .navbar-aurela .nav-link {
@@ -117,7 +121,7 @@ a:hover { color: var(--gold); }
   opacity: 0.6;
 }
 
-/* ---------- Dark wireframe-style section ---------- */
+/* dark section - matches the figma wireframe */
 .dark-section {
   background: var(--charcoal);
   padding: 3rem 0;
@@ -127,7 +131,7 @@ a:hover { color: var(--gold); }
 
 .carousel-frame {
   position: relative;
-  border-radius: 4px;
+  border-radius: 12px;
   overflow: hidden;
 }
 .carousel-arrow {
@@ -168,15 +172,18 @@ a:hover { color: var(--gold); }
 
 .container-tile {
   background: var(--cream-deep);
-  border-radius: 4px;
+  border-radius: 10px;
+  overflow: hidden;
   text-align: center;
-  transition: transform 0.2s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
-.container-tile:hover { transform: translateY(-3px); }
+.container-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 22px rgba(20,18,15,0.12);
+}
 .container-tile .img-wrap {
   aspect-ratio: 4 / 3;
   overflow: hidden;
-  border-radius: 4px 4px 0 0;
   background: #e4ddcf;
 }
 .container-tile img { width: 100%; height: 100%; object-fit: cover; }
@@ -187,7 +194,7 @@ a:hover { color: var(--gold); }
   color: var(--ink);
 }
 
-/* ---------- Hero ---------- */
+/* hero banner */
 .hero {
   position: relative;
   min-height: 78vh;
@@ -216,14 +223,20 @@ a:hover { color: var(--gold); }
   border-bottom: 1px solid var(--line);
 }
 
-/* ---------- Cards ---------- */
+/* product cards */
 .product-card {
   border: 1px solid var(--line);
+  border-radius: 10px;
   background: #fff;
-  transition: box-shadow 0.2s ease;
+  overflow: hidden;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
-.product-card:hover { box-shadow: 0 10px 24px rgba(20,18,15,0.08); }
+.product-card:hover {
+  box-shadow: 0 10px 24px rgba(20,18,15,0.08);
+  transform: translateY(-4px);
+}
 .product-card .img-wrap {
+  position: relative;
   aspect-ratio: 1 / 1;
   overflow: hidden;
   background: var(--cream-deep);
@@ -235,6 +248,30 @@ a:hover { color: var(--gold); }
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--gold-deep);
+}
+
+/* shows the price when you hover the product image */
+.price-tag {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.75rem;
+  background: rgba(20,18,15,0.58);
+  color: var(--cream);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  letter-spacing: 0.03em;
+  opacity: 0;
+  transform: scale(1.03);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
+}
+.product-card:hover .price-tag {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .section-title {
@@ -267,7 +304,8 @@ a:hover { color: var(--gold); }
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--ink);
-  border-radius: 0;
+  border-radius: 20px;
+  transition: all 0.2s ease;
 }
 .filter-btn.active,
 .filter-btn:hover {
@@ -276,7 +314,7 @@ a:hover { color: var(--gold); }
   border-color: var(--charcoal);
 }
 
-/* ---------- Forms ---------- */
+/* forms */
 .form-luxe label {
   font-size: 0.8rem;
   letter-spacing: 0.05em;
@@ -286,10 +324,11 @@ a:hover { color: var(--gold); }
 }
 .form-luxe .form-control,
 .form-luxe .form-select {
-  border-radius: 0;
+  border-radius: 6px;
   border: 1px solid var(--line);
   padding: 0.65rem 0.9rem;
   background: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 .form-luxe .form-control:focus,
 .form-luxe .form-select:focus {
@@ -297,7 +336,7 @@ a:hover { color: var(--gold); }
   box-shadow: 0 0 0 0.15rem rgba(184,147,90,0.25);
 }
 
-/* ---------- Footer ---------- */
+/* footer */
 footer.site-footer {
   background: var(--charcoal);
   color: rgba(248,244,238,0.75);
@@ -334,8 +373,14 @@ footer.site-footer .footer-bottom {
   border-radius: 50%;
   margin-left: 0.5rem;
   font-size: 0.95rem;
+  transition: all 0.2s ease;
 }
-.social-icons a:hover { background: var(--gold); color: var(--charcoal); border-color: var(--gold); }
+.social-icons a:hover {
+  background: var(--gold);
+  color: var(--charcoal);
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
 
 .stat-block { border-left: 1px solid var(--line); padding-left: 1.25rem; }
 
